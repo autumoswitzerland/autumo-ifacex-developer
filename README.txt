@@ -31,9 +31,10 @@ in your own project and IDE.
 
 TODOs:
 
-1.	Import the project in eclipse or in any other development IDE
+1.	Import the project in eclipse or in any other development IDE.
 
 2.	Execute 'maven-install.sh|bat' so the referenced libraries are installed
-	into your local Maven repository
+	into your local Maven repository (Only available with autumo ifaceX; see
+	https://products.autumo.ch).
 
 
