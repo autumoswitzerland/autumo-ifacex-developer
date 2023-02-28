@@ -23,6 +23,11 @@ import java.util.List;
  */
 public final class SourceEntity implements Comparable<String> {
 	
+	/**
+	 * Used for 'file_in' reader.
+	 */
+	public static final String FILES_SOURCE_FIELDS[] = new String[] {"filepath"};
+	
 	private IPC config = null;
 	
 	private boolean first = false;
