@@ -38,6 +38,8 @@ then
 fi
 
 
+mkdir -p product
+
 
 # ------------------------------------------------
 # -------- DELETE PRODUCT
@@ -47,9 +49,16 @@ then
 	cd product
 
 	# remove working directory
-	rm -Rf autumo-ifaceX-Developer-$IFACEX_VERSION
+	if [ -d "autumo-ifaceX-Developer-$IFACEX_VERSION" ]
+	then
+		rm -Rf autumo-ifaceX-Developer-$IFACEX_VERSION
+	fi
+	
 	# remove package
-	rm autumo-ifaceX-Developer-*.zip
+	if [ -f "autumo-ifaceX-Developer-*.zip" ]
+	then
+    	rm autumo-ifaceX-Developer-*.zip
+	fi	
 	
 	cd ..
 	
@@ -102,7 +111,7 @@ then
 
 	echo "-> Copying..."
 	
-	mkdir lib
+	mkdir -p lib
 	cp ../../lib/*.jar lib/
 
 	mkdir src
@@ -118,7 +127,7 @@ then
 	cp ../../maven-install.sh .
 	cp ../../maven-install.bat .
 
-	cp ../../README.txt .
+	cp ../../README.md .
 
 	
 
