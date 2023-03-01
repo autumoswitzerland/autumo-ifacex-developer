@@ -63,6 +63,17 @@ public interface RWC {
 
 	/**
 	 * This method can be used for ifaceX developers to get any
+	 * configuration parameter within a reader or writer that is
+	 * possibly decrypted.
+	 *  
+	 * @param postfix the post-fix, e.g., '_my_variable'.
+	 * @return (encrypted) configuration value
+	 * @throws UtilsException
+	 */
+	String getConfigDecodedIfNecessary(String postfix) throws UtilsException;
+	
+	/**
+	 * This method can be used for ifaceX developers to get any
 	 * configuration parameter within a reader or writer.
 	 *  
 	 * @param postfix the post-fix, e.g., '_my_variable'.
