@@ -24,9 +24,21 @@ import java.util.List;
 public final class SourceEntity implements Comparable<String> {
 	
 	/**
+	 * NULL entity name; used as a pseudo entity for readers that just need to
+	 * process one entity and that has no meaning in the source interface.
+	 */
+	public static final String NULL_ENTITY_NAME = "NULL";
+	
+	/**
+	 * Used for any reader configuration that need to read parameters valid for all entities.
+	 */
+	public static final SourceEntity WILDCARD_SOURCE_ENTITY = new SourceEntity(null, "*", null);
+	
+	/**
 	 * Used for 'file_in' reader.
 	 */
 	public static final String FILES_SOURCE_FIELDS[] = new String[] {"filepath"};
+
 	
 	private IPC config = null;
 	

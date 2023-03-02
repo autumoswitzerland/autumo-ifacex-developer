@@ -25,21 +25,25 @@ import ch.autumo.commons.utils.UtilsException;
  * The term 'rw-prefix' means Reader/Writer prefix, which can be, and in the
  * context of a reader or writer, e.g.:
  * 
- * - db_in
- * - rest_in
- * - csv_in
- * - mongo_in
- * - doc_in
  * - null_in
+ * - csv_in
+ * - file_in
+ * - doc_in
+ * - db_in
+ * - mongo_in
+ * - rest_in
  * - first_out
- * - db_out
- * - rest_out
- * - csv_out
- * - mongo_out
- * - mail_out
  * - console_out
+ * - csv_out
+ * - mail_out
+ * - file_out
+ * - db_out
+ * - mongo_out
+ * - rest_out
  * - code
  * - exec
+ * - ...and more.
+
  * 
  * See also interfaces configuration 'cfg/interfaces.cfg'.
  * 
@@ -63,6 +67,16 @@ public interface RWC {
 
 	/**
 	 * This method can be used for ifaceX developers to get any
+	 * configuration parameter within a reader or writer.
+	 *  
+	 * @param postfix the post-fix, e.g., '_my_variable'.
+	 * @param defaultValue default value
+	 * @return configuration value or default value if value is not found or invalid
+	 */
+	String getConfig(String postfix, String defaultValue);
+	
+	/**
+	 * This method can be used for ifaceX developers to get any
 	 * configuration parameter within a reader or writer that is
 	 * possibly decrypted.
 	 *  
@@ -73,14 +87,12 @@ public interface RWC {
 	String getConfigDecodedIfNecessary(String postfix) throws UtilsException;
 	
 	/**
-	 * This method can be used for ifaceX developers to get any
-	 * configuration parameter within a reader or writer.
-	 *  
+	 * Get comma-separated configuration values.
+	 * 
 	 * @param postfix the post-fix, e.g., '_my_variable'.
-	 * @param defaultValue default value
-	 * @return configuration value or default value if value is not found or invalid
+	 * @return separated values
 	 */
-	String getConfig(String postfix, String defaultValue);
+	String[] getSeparatedValues(String postfix);
 	
 	/**
 	 * Get value for '<rw-prefix>_<source-entity>_fields'.
