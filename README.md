@@ -2,8 +2,6 @@
 
 ## autumo ifaceX Developer Project 1.2.0 - Developer Reference
 
-### &copy; 2023 autumo GmbH - Date: 01.02.2023
-
 This is a maven eclipse project and serves as a developer reference when 
 extending the autumo ifaceX platform programmatically. If you have acquired
 an enterprise license of autumo ifaceX you also have access to the Developer
