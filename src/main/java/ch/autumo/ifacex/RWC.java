@@ -110,6 +110,28 @@ public interface RWC {
 	String getConfigDecodedIfNecessary(String postfix) throws UtilsException;
 	
 	/**
+	 * This method can be used for ifaceX developers to get any
+	 * number configuration parameter within a reader or writer.
+	 * This method return -1, if the configuration value isn't found. 
+	 *  
+	 * @param postfix the post-fix, e.g., '_my_variable'.
+	 * @return configuration number value
+	 */
+	int getNumber(String postfix);
+
+	/**
+	 * This method can be used for ifaceX developers to get any
+	 * number configuration parameter within a reader or writer.
+	 * This method returns the default value, if the configuration 
+	 * value isn't found. 
+	 *  
+	 * @param postfix the post-fix, e.g., '_my_variable'.
+	 * @param defaultValue default number value
+	 * @return configuration number value
+	 */
+	int getNumber(String postfix, int defaultValue);
+	
+	/**
 	 * Get comma-separated configuration values.
 	 * 
 	 * @param postfix the post-fix, e.g., '_my_variable'.
