@@ -14,7 +14,7 @@ repository.
 Of course, you can also just look at the source files and use what you need
 in your own project and IDE.
 
-### Install:
+### Install
 
 1.	You can import the project in eclipse or in any other development IDE.
 
