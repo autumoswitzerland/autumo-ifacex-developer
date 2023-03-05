@@ -55,6 +55,29 @@ public interface RWC {
 	//------------------------------------------------------------------------------
 	// General configuration
 	//------------------------------------------------------------------------------
+
+	/**
+	 * This method can be used for ifaceX developers to get any
+	 * configuration parameter within a reader or writer.
+	 * 
+	 * Possible configuration values are 'yes' or 'no' - case-insensitive.
+	 *  
+	 * @param postfix the post-fix, e.g., '_my_variable'.
+	 * @return true if value was 'yes', otherwise, inclusive all other values, false.
+	 */
+	boolean isYes(String postfix);
+	
+	/**
+	 * This method can be used for ifaceX developers to get any
+	 * configuration parameter within a reader or writer.
+	 * 
+	 * Possible configuration values are 'yes' or 'no' - case-insensitive.
+	 *  
+	 * @param postfix the post-fix, e.g., '_my_variable'.
+	 * @param defaultValue default value; true or false
+	 * @return true if value was 'yes', otherwise, inclusive all other values, false.
+	 */
+	boolean isYes(String postfix, boolean defaultValue);
 	
 	/**
 	 * This method can be used for ifaceX developers to get any
