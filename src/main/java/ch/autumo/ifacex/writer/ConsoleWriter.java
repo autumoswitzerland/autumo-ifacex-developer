@@ -14,9 +14,6 @@
  */
 package ch.autumo.ifacex.writer;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import ch.autumo.ifacex.IPC;
 import ch.autumo.ifacex.IfaceXException;
 import ch.autumo.ifacex.Processor;
@@ -27,8 +24,6 @@ import ch.autumo.ifacex.batch.BatchData;
  * Console writer.
  */
 public class ConsoleWriter implements Writer {
-
-	private final static Logger LOG = LoggerFactory.getLogger(ConsoleWriter.class.getName());
 
 	private String delim;
 	private String fields[];
@@ -46,7 +41,7 @@ public class ConsoleWriter implements Writer {
 		
 		if (fields == null || fields.length == 0) {
 			
-			LOG.info("WRITER '"+writerName+"' - No output field names specified, taking source field names for header.");
+			System.out.println("WRITER '"+writerName+"' - No output field names specified, taking source field names for header.");
 			fields = entity.getSourceFields();
 		}
 	}	
