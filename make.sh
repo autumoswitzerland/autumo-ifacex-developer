@@ -128,6 +128,7 @@ then
 	cp ../../maven-install.bat .
 
 	cp ../../README.md .
+	cp ../../LICENSE.md .
 
 	
 
