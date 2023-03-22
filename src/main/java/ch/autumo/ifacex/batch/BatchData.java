@@ -159,6 +159,16 @@ public class BatchData implements Iterator<String[]> {
 		return iterator.next();
 	}
 	
+	
+	/**
+	 * Amount of records in the batch data.
+	 * 
+	 * @return size of batch
+	 */
+	public int size() {
+		return data.size();
+	}
+	
 	/**
 	 * Has this batch been processed?
 	 * 
