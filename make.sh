@@ -55,9 +55,9 @@ then
 	fi
 	
 	# remove package
-	if [ -f "autumo-ifaceX-Developer-*.zip" ]
+	if [ -f "autumo-ifaceX-Developer-$IFACEX_VERSION.zip" ]
 	then
-    	rm autumo-ifaceX-Developer-*.zip
+    	rm autumo-ifaceX-Developer-$IFACEX_VERSION.zip
 	fi	
 	
 	cd ..
@@ -160,7 +160,7 @@ then
 
 	
 else
-	echo "Nope! -> make create"
+	echo "Nope! -> make create|clear"
 	echo " "
 fi
 
