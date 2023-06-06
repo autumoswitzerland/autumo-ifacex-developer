@@ -296,14 +296,13 @@ public interface WriterMapping {
 	String getDbFieldsForInsert() throws IfaceXException;
 
 	/**
-	 * Get a plain text record separated by the value defined by the
-	 * parameter 'value_delimiter' in 'cfg/ifacex.cfg'. 
+	 * Get a plain text record. 
 	 * 
 	 * @param values current source values from batch to process
-	 * @return text record
+	 * @return mapped text record
 	 * @throws IfaceXException
 	 */
-	String getTextValues(String values[]) throws IfaceXException;
+	String[] getTextValues(String values[]) throws IfaceXException;
 
 	/**
 	 * Get CSV record without destination mapping. The values are
