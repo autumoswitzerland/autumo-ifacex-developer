@@ -84,25 +84,8 @@ public interface IPC {
 	RWC getWriterConfig(String writerName);
 
 	/**
-	 * Get separated values, separated by configured value and 
-	 * unzip values based on configured enclosure character
-	 * ('value_delimiter' in 'cfg/ifacex.cfg').
-	 * 
-	 * For headers, detecting of delimiters within values
-	 * is disabled!
-	 * 
-	 * @param line line
-	 * @param header is it a a CSV header?
-	 * @return separated values
-	 */
-	String[] getCSVSepValues(String line, boolean header);
-	
-	/**
-	 * Get separated values, separated by configured value and 
-	 * unzip values based on configured enclosure character
-	 * ('value_delimiter' in 'cfg/ifacex.cfg').
-	 * 
-	 * Don't use for CSV headers!
+	 * Get separated values, separated by configured 'value_delimiter'
+	 * in 'cfg/ifacex.cfg'.
 	 * 
 	 * @param line line
 	 * @return separated values

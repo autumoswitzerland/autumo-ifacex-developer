@@ -61,7 +61,7 @@ public class ExampleReader implements Reader {
 			
 			// we assume field names are in last header !
 			if (i == size - 1) {
-				fields = config.getCSVSepValues(header, true);
+				fields = config.getCSVSepValues(header);
 			}
 			i++;
 		}
