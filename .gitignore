@@ -2,3 +2,4 @@
 /product/
 /target/
 **/.DS_Store
+/distribute.sh
