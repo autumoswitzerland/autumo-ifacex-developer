@@ -56,10 +56,10 @@ public class MyServer extends Server {
 		super.beforeStop();
 	}
 	@Override
-	protected void printHealthStatus() {
+	protected boolean printHealthStatus(boolean hasNoIssues) {
 		// Print out the server health status
 		// add your status liens to it.
-		super.printHealthStatus();
+		return super.printHealthStatus(hasNoIssues);
 	}
 	@Override
 	public String getHelpText() {
