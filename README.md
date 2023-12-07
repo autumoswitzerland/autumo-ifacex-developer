@@ -1,6 +1,6 @@
 # README
 
-## autumo ifaceX Developer Project 1.2.0 - Developer Reference
+## autumo ifaceX Developer Project 1.3.0 - Developer Reference
 
 This is a maven eclipse project and serves as a developer reference when 
 extending the autumo ifaceX platform programmatically. If you have acquired
