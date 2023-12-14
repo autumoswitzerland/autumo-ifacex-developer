@@ -58,7 +58,7 @@ public class MyServer extends Server {
 	@Override
 	protected boolean printHealthStatus(boolean hasNoIssues) {
 		// Print out the server health status
-		// add your status liens to it.
+		// add your status lines to it.
 		return super.printHealthStatus(hasNoIssues);
 	}
 	@Override
