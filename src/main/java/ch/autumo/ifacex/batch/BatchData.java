@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import ch.autumo.commons.utils.OSUtils;
+import ch.autumo.commons.utils.system.OSUtils;
 import ch.autumo.ifacex.Configuration;
 import ch.autumo.ifacex.Constants;
 import ch.autumo.ifacex.IPC;
