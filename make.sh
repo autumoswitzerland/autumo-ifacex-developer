@@ -3,7 +3,7 @@
 ###############################################################################
 #
 #  autumo ifaceX developer project packager.
-#  Version: 1.1
+#  Version: 2.0
 #
 #  Notes:
 #   -
@@ -19,7 +19,7 @@
 
 
 # VARS
-IFACEX_VERSION=1.3.0
+IFACEX_VERSION=2.0.0
 
 
 
