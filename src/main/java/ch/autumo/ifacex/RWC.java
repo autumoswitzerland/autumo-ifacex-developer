@@ -675,11 +675,12 @@ public interface RWC {
 
 	/**
 	 * Get value for '<rw-prefix>_query'.
-	 * Addition JSON body that can be send with HTTP-Gets within the REST reader.
+	 * Additional JSON body. If present, request is made with a HTTP-Post instead
+	 * a HTTP-Get within the REST reader!
 	 * 
 	 * If not found, try get a value from '<rw-prefix>_*_query'.
 	 * 
-	 * @return URL parameter fetch size
+	 * @return JSON request for HTTP-Post body
 	 */
 	String getQuery(SourceEntity entity);
 	
