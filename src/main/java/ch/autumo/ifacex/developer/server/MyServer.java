@@ -11,8 +11,8 @@ import ch.autumo.ifacex.server.Server;
  * but if you want to extend it, you should sub-class it.
  * You can overwrite some methods, but you always have
  * to call the super-methods FIRST, because the ifaceX
- * server itself is already based on a framework:
- * The autumo beetRoot framework (Open Source, MIT License).
+ * server itself is already based on the autumo beetRoot
+ * framework (Apache License 2.0).
  *
  */
 public class MyServer extends Server {
@@ -36,8 +36,8 @@ public class MyServer extends Server {
 	@Override
 	public ClientAnswer processServerCommand(ServerCommand command) {
 		// Processing server commands is undocumented.
-		// It is used for the distributed dispatchers;
-		// the ifaceX Scheduler modul uses it.
+		// It is used for the distributed dispatchers (aka modules);
+		// the ifaceX Scheduler module uses it.
 		return super.processServerCommand(command);
 	}
 	@Override
