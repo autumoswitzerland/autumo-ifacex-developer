@@ -17,9 +17,10 @@
 	
 		<version.maven.compiler.plugin>3.13.0</version.maven.compiler.plugin>
 		
-		<version.autumo.beetroot>3.1.0</version.autumo.beetroot>
-		<version.autumo.commons>1.1.0</version.autumo.commons>
 		<version.autumo.ifacex>2.1.0</version.autumo.ifacex>
+		<version.autumo.beetroot>3.1.1</version.autumo.beetroot>
+		<version.autumo.commons>1.1.0</version.autumo.commons>
+
 		<version.commons.lang3>3.15.0</version.commons.lang3>
 		<version.junit>4.13.2</version.junit>
 		
