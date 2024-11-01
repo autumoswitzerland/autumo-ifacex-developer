@@ -2,7 +2,7 @@
 
 ## autumo ifaceX Developer Project 2.0.0 - Developer Reference
 
-This is a maven eclipse project and serves as a developer reference when 
+This is a maven eclipse project serves as a developer reference when 
 extending the autumo ifaceX platform programmatically. If you have acquired
 an enterprise license of autumo ifaceX you also have access to the Developer
 Reference Manual.
