@@ -2,7 +2,7 @@ package ch.autumo.ifacex.developer.writer;
 
 import ch.autumo.ifacex.IPC;
 import ch.autumo.ifacex.RWC;
-import ch.autumo.ifacex.util.IPCRunner;
+import ch.autumo.ifacex.utils.IPCRunner;
 import ch.autumo.ifacex.writer.Code;
 
 /**
