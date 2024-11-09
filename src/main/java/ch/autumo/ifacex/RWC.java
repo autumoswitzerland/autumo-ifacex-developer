@@ -27,6 +27,7 @@ import ch.autumo.commons.utils.UtilsException;
  * 
  * - null_in
  * - csv_in
+ * - json_in
  * - file_in
  * - doc_in
  * - db_in
@@ -35,6 +36,7 @@ import ch.autumo.commons.utils.UtilsException;
  * - first_out
  * - console_out
  * - csv_out
+ * - json_out
  * - mail_out
  * - file_out
  * - db_out
@@ -43,7 +45,6 @@ import ch.autumo.commons.utils.UtilsException;
  * - code
  * - exec
  * - ...and more.
-
  * 
  * See also interfaces configuration 'cfg/interfaces.cfg'.
  * 

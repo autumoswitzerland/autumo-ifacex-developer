@@ -70,21 +70,16 @@ public class BatchData implements Iterator<String[]> {
 	 * @param config config
 	 */
 	public BatchData(IPC config) {
-		
 		replace = ((Configuration) config).replaceChar();
 		oldD = ((Configuration) config).getOldChar();
 		newD = ((Configuration) config).getNewChar();
-		
 		cleanNullValues = ((Configuration) config).cleanNullValues();
-		
 		mapCountry = ((Configuration) config).map2ISOCodes();
 		countryFieldNames = ((Configuration) config).getSourceCountryFieldsList();
 		defaultIso = ((Configuration) config).getMapDefaultIso();
 		if (defaultIso == null)
 			defaultIso = Constants.DEFAULT_ISO;
-		
 		defaultIso = defaultIso.toUpperCase();
-		
 		csvDelim = config.getCSVDelimiterChar();
 	}
 
@@ -101,29 +96,22 @@ public class BatchData implements Iterator<String[]> {
 	 * @return
 	 */
 	public String modifyValueBeforeAdding(String val, String fieldName) {
-		
 		if (val == null)
 			return "";
-
 		val = val.trim();
-		
 		// 'null' string values are just futile, always, fight me!
 		if (cleanNullValues && val.equalsIgnoreCase("null")) 
 			return "";
-		
 		// replace char ?
 		if (replace && val.indexOf(oldD) != -1) {
 			val = val.replaceAll(oldD, newD);
 		}
-		
 		if (mapCountry && countryFieldNames.contains(fieldName)) {
-			
 			if (Configuration.containsGeodata(val))
 				val = Configuration.getGeodata(val).getISO().toUpperCase();
 			else
 				val = defaultIso;
 		}
-		
 		return val;
 	}
 	
@@ -135,7 +123,7 @@ public class BatchData implements Iterator<String[]> {
 	public void addRecordValues(List<String> record) {
 		this.addRecordValues(record.toArray(new String[record.size()]));
 	}
-	
+
 	/**
 	 * Main add method (all add calls end here).
 	 * 
@@ -158,7 +146,6 @@ public class BatchData implements Iterator<String[]> {
 	public String[] next() {
 		return iterator.next();
 	}
-	
 	
 	/**
 	 * Amount of records in the batch data.
@@ -246,22 +233,16 @@ public class BatchData implements Iterator<String[]> {
 	 * @return copied batch
 	 */
 	BatchData copy() {
-		
 		final BatchData newData = new BatchData();
-		
 		newData.csvDelim = this.csvDelim;
-		
-		// we don't need to copy infos for modifyng, 
+		// We don't need to copy infos for modifyng, 
 		// only the first batch created in the reader
 		// needs this data.
-		
 		newData.batch = this.batch;
-		
 		int len = data.size();
 		for (int i = 0; i < len; i++) {
 			newData.data.add(this.data.get(i));
 		}
-		
 		return newData;
 	}
 	
@@ -272,7 +253,6 @@ public class BatchData implements Iterator<String[]> {
 	 * @return batch representation
 	 */
 	public final String toString() {
-		
 		if (batch == null) {
 			batch = "";
 			int datalen = data.size();
@@ -288,12 +268,9 @@ public class BatchData implements Iterator<String[]> {
 				batch += OSUtils.LINE_SEPARATOR;				
 			}
 		}
-		
 		if (batch.length() != 0)
 			return batch.substring(0, batch.length()-1);
-
 		else return "";
 	}
-
 	
 }

@@ -178,14 +178,6 @@ public interface IPC {
 	 * @return value or default value if value is not found or invalid
 	 */
 	String getValue(String key, String defaultValue);
-	
-	/**
-	 * Get the runtime environment value
-	 * ('RUN_ENV' in '/any-path/ipc-config.ifacex').
-	 * 
-	 * @return run-env value
-	 */
-	String getRunEnv();
 
 	/**
 	 * Get the source interface / reader prefix name,

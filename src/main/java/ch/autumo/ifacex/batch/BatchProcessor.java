@@ -16,12 +16,13 @@ package ch.autumo.ifacex.batch;
 
 import ch.autumo.ifacex.IfaceXException;
 import ch.autumo.ifacex.SourceEntity;
+import ch.autumo.ifacex.writer.WriterException;
 
 
 /**
  * Batch processor; 1 Interface Processor (IP) = 1 BatchProcessor.
  * 
- * Processing batches for all IP writers serially or parallely.
+ * Processing batches for all IP writers serially or in parallel.
  */
 public interface BatchProcessor {
 
@@ -53,7 +54,7 @@ public interface BatchProcessor {
 	 * @param batch batch data
 	 * @param entity source entity
 	 * @param boolean moreData true, if more batches are following, false if it is the last batch to process
-	 * @throws IfaceXException
+	 * @throws WriterException
 	 */
 	void processBatchData(BatchData batch, SourceEntity entity, boolean moreData) throws IfaceXException;
 	

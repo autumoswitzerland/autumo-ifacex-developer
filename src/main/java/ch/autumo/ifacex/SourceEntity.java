@@ -106,7 +106,6 @@ public final class SourceEntity implements Comparable<String> {
 	 * @return true if so
 	 */
 	public boolean containsSourceField(String fieldName) {
-		
 		for (int i = 0; i < sourceFields.length; i++) {
 			if (sourceFields[i].equals(fieldName))
 				return true;
@@ -121,7 +120,6 @@ public final class SourceEntity implements Comparable<String> {
 	 * @return index
 	 */
 	public int indexOfSourceField(String fieldName) {
-		
 		for (int i = 0; i < sourceFields.length; i++) {
 			if (sourceFields[i].equals(fieldName))
 				return i;
@@ -173,7 +171,6 @@ public final class SourceEntity implements Comparable<String> {
 	void markLast() {
 		this.last = true;
 	}
-	
 	
 	@Override
 	public final int compareTo(String anotherEntity) {

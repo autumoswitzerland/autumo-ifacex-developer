@@ -15,7 +15,7 @@
 package ch.autumo.ifacex;
 
 /**
- * Data mapper interface for customized additional parsing.
+ * Data-mapper interface for customized additional parsing.
  */
 public interface DataMapper {
 
