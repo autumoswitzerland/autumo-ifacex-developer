@@ -40,10 +40,9 @@ public interface Reader extends Generic {
 	 * @param readerName reader name
 	 * @param config IPC
 	 * @param entity source entity
-	 * @throws ReaderException
 	 * @throws IfaceXException
 	 */
-	public abstract void initializeEntity(String readerName, IPC config, SourceEntity entity) throws ReaderException, IfaceXException;
+	public abstract void initializeEntity(String readerName, IPC config, SourceEntity entity) throws IfaceXException;
 	
 	/**
 	 * Read the whole entity (e.g. a table) and process every {@link BatchData} created
