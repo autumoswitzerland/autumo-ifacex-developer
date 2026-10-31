@@ -35,7 +35,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## autumo Products General License
 
- Copyright 2023 autumo GmbH, Michael Gasche.
+ Copyright 2026 autumo GmbH, Michael Gasche.
  All Rights Reserved.
 
  NOTICE: All information contained herein is, and remains
