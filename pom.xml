@@ -18,7 +18,7 @@
 		<version.maven.compiler.plugin>3.16.0</version.maven.compiler.plugin>
 		
 		<version.autumo.ifacex>3.0.0</version.autumo.ifacex>
-		<version.autumo.beetroot>3.3.0</version.autumo.beetroot>
+		<version.autumo.beetroot>3.4.0</version.autumo.beetroot>
 		<version.autumo.commons>1.2.0</version.autumo.commons>
 
 		<version.commons.lang3>3.21.0</version.commons.lang3>
@@ -32,7 +32,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${version.maven.compiler.plugin}</version>
 				<configuration>
-					<release>17</release>
+					<release>21</release>
 				</configuration>
 			</plugin>
 		</plugins>
